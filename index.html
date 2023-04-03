@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title></title>
+		<title>MoneyMate - Your Financial buddy</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 	</head>
 	<body>
 		<header>
@@ -55,7 +56,38 @@
 				<img src="assets/creditcards.png" alt="" />
 			</div>
 		</main>
-		<section class="form-container"></section>
+		<section id="form-section">
+			<div class="sign-in-form-container">
+				<div class="left-side-container">
+					<div class="form-toggle">
+						<a data="focus">sign in</a>
+						<a data="off">register</a>
+					</div>
+					<div class="form-text">
+						<h3>Login to see <br />your account</h3>
+						<p data="off">Lorem ipsum dolor sit amet.</p>
+					</div>
+					<form id="sign-in">
+						<div class="field">
+							<input
+								type="email"
+								name="email"
+								placeholder="Example@gmail.com"
+							/>
+							<label for="email">Email</label>
+						</div>
+						<div class="field">
+							<input
+								type="password"
+								name="password"
+								placeholder="*************"
+							/>
+							<label for="password">Password</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
 		<script src="" async defer></script>
 	</body>
 </html>
