@@ -153,10 +153,10 @@ a[data="focus"] {
 	color: var(--text-color-off);
 }
 #sign-in {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	justify-content: center;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap: 0.3em 0;
+	justify-items: center;
 	align-items: center;
 }
 .field {
@@ -175,3 +175,10 @@ a[data="focus"] {
 .field input::placeholder {
 	color: var(--text-color);
 }
+
+/*
+display: grid; 
+grid-template-columns: 1fr 1fr; 
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+gap: 2em 6em; 
+*/
