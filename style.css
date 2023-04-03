@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
 
 :root {
-	--bg-color: #2b304d;
+	--bg-color: #151d2f;
 	--main-color: #636b97;
 	--secondary-color: #3f4365;
 	--text-color: #ffffff;
 	--text-color-off: #86889e;
+	--btn-color: #eeaa74;
+	--main-fontweight: 400;
+	--secondary-fontweight: 600;
 }
 
 /*Usual reset*/
 * {
 	margin: 0;
+}
+a {
+	text-decoration: none;
 }
 a:visited,
 a:link {
@@ -20,12 +26,61 @@ input:focus {
 	outline: none;
 }
 
-/*Styling*/
+/*general Styling*/
 body {
+	color: var(--text-color);
 	background-color: var(--bg-color);
+	font-weight: var(--main-fontweight);
 	font-family: "Raleway", sans-serif;
 }
 input {
 	background-color: var(--main-color);
 	color: var(--text-color);
+}
+a[data="special"] {
+	color: var(--btn-color);
+}
+
+/*Hovers*/
+a:hover {
+	color: var(--btn-color);
+}
+a[data="special"]:hover {
+	color: var(--text-color);
+}
+
+/*Header*/
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr 3fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+	gap: 14rem;
+}
+header * {
+	inline-size: min-content;
+}
+#logo {
+	width: 170px;
+	height: 96px;
+}
+.navbar-container,
+.anchor-container {
+	display: flex;
+	gap: 3rem;
+}
+.anchor-container {
+	justify-self: end;
+	margin-right: 10rem;
+	font-weight: var(--secondary-fontweight);
+}
+.anchor-container a,
+.navbar-container a {
+	inline-size: max-content;
+}
+/*Main*/
+Main {
+	display: flex;
+	justify-content: center;
+	align-items: top;
 }
