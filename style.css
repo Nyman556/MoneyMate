@@ -9,6 +9,7 @@
 	--btn-color: #eeaa74;
 	--main-fontweight: 400;
 	--secondary-fontweight: 600;
+	--tertiary-fontweight: bold;
 }
 
 /*Usual reset*/
@@ -25,6 +26,9 @@ a:link {
 input:focus {
 	outline: none;
 }
+button {
+	border: none;
+}
 
 /*general Styling*/
 body {
@@ -32,6 +36,11 @@ body {
 	background-color: var(--bg-color);
 	font-weight: var(--main-fontweight);
 	font-family: "Raleway", sans-serif;
+}
+header,
+main,
+section {
+	margin-bottom: 10vh;
 }
 input {
 	background-color: var(--main-color);
@@ -82,5 +91,22 @@ header * {
 Main {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	align-items: top;
+	margin: 0 20vw 0 20vw;
+}
+.text-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.text-container p {
+	color: var(--main-color);
+}
+.btn {
+	font-weight: var(--tertiary-fontweight);
+	inline-size: max-content;
+	padding: 1rem 0.5rem;
+	border-radius: 7px;
+	background-color: var(--btn-color);
 }
