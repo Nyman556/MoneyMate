@@ -31,9 +31,11 @@ button {
 }
 
 /*general Styling*/
-html {
+html,
+body {
 	position: relative;
 	min-height: 100%;
+	-webkit-overflow-scrolling: touch;
 }
 body {
 	color: var(--text-color);
