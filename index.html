@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>MoneyMate - Your Financial buddy</title>
-		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -28,7 +27,7 @@
 	<body>
 		<header>
 			<div class="logo-container">
-				<img id="logo" src="assets/logo.png" alt="" />
+				<img id="logo" src="assets/logo.png" alt="MoneyMate Logo" />
 			</div>
 			<div class="navbar-container flex-d-r">
 				<a href="#">Deposit</a>
@@ -42,7 +41,7 @@
 			</div>
 		</header>
 
-		<main class="flex-d-r align-justify-center">
+		<main>
 			<div class="text-container flex-d-c">
 				<h1>Banking done easy</h1>
 				<p>
@@ -79,29 +78,25 @@
 						<a data="focus">sign in</a>
 						<a data="off">register</a>
 					</div>
-					<form action="" id="sign-in" class="align-justify-center">
+					<form action="submit" id="sign-in" class="align-justify-center">
 						<h3>Login to see your account</h3>
 						<p>Lorem ipsum dolor sit amet.</p>
 						<div class="field flex-d-c">
-							<input
-								type="email"
-								name="email"
-								placeholder="Example@gmail.com"
-							/>
+							<input type="email" id="email" placeholder="Example@gmail.com" />
 							<label for="email">Email</label>
 						</div>
 						<div class="field flex-d-c">
 							<input
 								type="password"
-								name="password"
+								id="password"
 								placeholder="*************"
 							/>
 							<label for="password">Password</label>
 						</div>
 						<div class="form-bottom">
 							<div class="checkmark-wrapper">
-								<input type="checkbox" name="remember" />
-								<label for="remember">remember me</label>
+								<input type="checkbox" id="remember-checkbox" />
+								<label for="remember-checkbox">remember me</label>
 							</div>
 							<a href="#">forgot password?</a>
 						</div>

@@ -106,6 +106,9 @@ header * {
 /*Main*/
 
 Main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	gap: 0.5rem;
 }
 .text-container {
@@ -195,4 +198,61 @@ footer {
 	padding: 10px;
 	bottom: 0px;
 	left: 0px;
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.anchor-container {
+		margin-right: none;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.anchor-container {
+		margin-right: 2rem;
+	}
+	.sign-in-form-container {
+		background: none;
+		width: auto;
+	}
+	.content-container img {
+		scale: 0.4;
+	}
+}
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+	.navbar-container {
+		display: none;
+	}
+	.anchor-container {
+		margin-right: 3rem;
+	}
+	.text-container {
+		text-align: center;
+	}
+	.text-container .btn {
+		align-self: center;
+	}
+	.content-container img {
+		scale: 0.6;
+	}
+}
+/* Large desktop */
+@media (max-width: 1200px) {
+	header {
+		gap: 0;
+	}
+	main {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	.content-container img {
+		scale: 0.7;
+	}
 }
