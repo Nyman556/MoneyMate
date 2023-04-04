@@ -23,6 +23,9 @@ a:visited,
 a:link {
 	color: var(--text-color);
 }
+input {
+	border: none;
+}
 input:focus {
 	outline: none;
 }
@@ -47,7 +50,7 @@ header,
 main,
 section {
 	width: 100%;
-	margin-bottom: 10vh;
+	padding-bottom: 10vh;
 }
 input {
 	background-color: var(--main-color);
@@ -55,6 +58,11 @@ input {
 }
 a[data="special"] {
 	color: var(--btn-color);
+}
+h1,
+h2,
+h3 {
+	font-size: clamp(1.5rem 2rem 2rem);
 }
 
 /*Flex classes*/
@@ -138,7 +146,7 @@ Main {
 	background-color: var(--btn-color);
 }
 /*Form section*/
-
+/*Sign-in form*/
 #form-section {
 	height: 80vh;
 }
@@ -162,7 +170,7 @@ Main {
 	display: flex;
 	justify-content: space-around;
 	font-size: 20px;
-	padding: 1rem;
+	padding: 0.5rem 1rem;
 }
 .form-text {
 	margin-left: 3.2rem;
@@ -192,17 +200,18 @@ a[data="focus"] {
 .field input {
 	color: var(--text-color);
 	order: 1;
-	border: none;
 }
 
 .field input::placeholder {
-	color: var(--text-color);
+	color: var(--text-color-off);
 }
 
 .form-bottom {
 	display: flex;
 	gap: 1em;
 }
+
+/*Register form*/
 
 /*Footer*/
 footer {
@@ -223,7 +232,7 @@ footer {
 		flex-direction: column;
 	}
 	.content-container img {
-		scale: 0.7;
+		scale: clamp(0.5 0.7 0.7);
 	}
 }
 /* Portrait tablet to landscape and desktop */
@@ -234,6 +243,11 @@ footer {
 	}
 	.navbar-container {
 		display: none;
+	}
+	.hamburger-menu,
+	.hamburger-menu:before,
+	.hamburger-menu::after {
+		display: inherit;
 	}
 	.anchor-container {
 		margin-right: 3rem;
@@ -261,8 +275,8 @@ footer {
 		background: none;
 		width: auto;
 	}
-	.content-container img {
-		scale: 0.5;
+	.content-container {
+		max-width: 390px;
 	}
 }
 /* Landscape phones and down */
@@ -270,10 +284,40 @@ footer {
 	.anchor-container {
 		margin-right: none;
 	}
+	.text-container {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
 	.content-container img {
 		scale: 0.4;
 	}
 	.content-container {
 		max-width: 390px;
 	}
+	main {
+		padding-bottom: 0;
+	}
+}
+
+p,
+a,
+input,
+label,
+button {
+	font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+#sign-in {
+	display: none;
+}
+#register {
+	display: grid;
+	grid-auto-rows: 1fr;
+	gap: 0.3em 0;
+}
+#register .btn {
+	align-self: center;
+}
+::-webkit-calendar-picker-indicator {
+	filter: invert(1);
 }
