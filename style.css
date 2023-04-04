@@ -110,6 +110,7 @@ Main {
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
+	overflow: hidden;
 }
 .text-container {
 	gap: 2rem;
