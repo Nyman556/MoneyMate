@@ -64,6 +64,12 @@ h2,
 h3 {
 	font-size: clamp(1.5rem 2rem 2rem);
 }
+.hidden {
+	display: none;
+}
+.active {
+	display: grid;
+}
 
 /*Flex classes*/
 .flex-d-r {
@@ -185,7 +191,6 @@ a[data="focus"] {
 	cursor: pointer;
 }
 #sign-in {
-	display: grid;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 	gap: 0.3em 0;
 }
@@ -306,12 +311,7 @@ label,
 button {
 	font-size: clamp(0.8rem, 2vw, 1rem);
 }
-
-#sign-in {
-	display: none;
-}
 #register {
-	display: grid;
 	grid-auto-rows: 1fr;
 	gap: 0.3em 0;
 }

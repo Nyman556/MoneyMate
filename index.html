@@ -75,10 +75,18 @@
 			<div class="sign-in-form-container">
 				<div class="left-side-container">
 					<div class="form-toggle">
-						<a data="focus">sign in</a>
-						<a data="off">register</a>
+						<a id="sign-in-btn" data="focus" onclick="toggleForms(this)"
+							>sign in</a
+						>
+						<a id="register-btn" data="off" onclick="toggleForms(this)"
+							>register</a
+						>
 					</div>
-					<form action="submit" id="sign-in" class="align-justify-center">
+					<form
+						action="submit"
+						id="sign-in"
+						class="align-justify-center active"
+					>
 						<h3>Login to see your account</h3>
 						<p>Lorem ipsum dolor sit amet.</p>
 						<div class="field flex-d-c">
@@ -102,7 +110,11 @@
 						</div>
 						<button class="btn">sign in</button>
 					</form>
-					<form action="submit" id="register" class="align-justify-center">
+					<form
+						action="submit"
+						id="register"
+						class="align-justify-center hidden"
+					>
 						<h3>Sign up now!</h3>
 						<div class="field flex-d-c">
 							<input type="text" id="fname" placeholder="John" />
@@ -113,16 +125,20 @@
 							<label for="lname">Last Name</label>
 						</div>
 						<div class="field flex-d-c">
-							<input type="email" id="email" placeholder="Example@gmail.com" />
-							<label for="email">Email</label>
+							<input
+								type="email"
+								id="register-email"
+								placeholder="Example@gmail.com"
+							/>
+							<label for="register-email">Email</label>
 						</div>
 						<div class="field flex-d-c">
 							<input
 								type="password"
-								id="password"
+								id="register-password"
 								placeholder="*************"
 							/>
-							<label for="password">Password</label>
+							<label for="register-password">Password</label>
 						</div>
 						<div class="field flex-d-c">
 							<input
@@ -148,6 +164,6 @@
 			</div>
 		</section>
 		<footer><a href="https://github.com/Nyman556">Nyman556</a></footer>
-		<script src="" async defer></script>
+		<script src="script.js" async defer></script>
 	</body>
 </html>
