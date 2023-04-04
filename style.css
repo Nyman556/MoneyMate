@@ -31,6 +31,16 @@ button {
 }
 
 /*general Styling*/
+html,
+body {
+	overflow-y: scroll; /* We need scroll-y */
+	overflow-x: hidden; /* this is ok */
+	transition: all 0.3s; /* most browsers understand this */
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
 body {
 	color: var(--text-color);
 	background-color: var(--bg-color);
@@ -245,6 +255,9 @@ footer {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+	body {
+		overflow-y: scroll;
+	}
 	.anchor-container {
 		margin-right: 2rem;
 	}
