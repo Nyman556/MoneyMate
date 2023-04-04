@@ -50,6 +50,20 @@ a[data="special"] {
 	color: var(--btn-color);
 }
 
+/*Flex classes*/
+.flex-d-r {
+	display: flex;
+	flex-direction: row;
+}
+.flex-d-c {
+	display: flex;
+	flex-direction: column;
+}
+.align-justify-center {
+	align-items: center;
+	justify-content: center;
+}
+
 /*Hovers*/
 a:hover {
 	color: var(--btn-color);
@@ -78,7 +92,6 @@ header * {
 }
 .navbar-container,
 .anchor-container {
-	display: flex;
 	gap: 3rem;
 }
 .anchor-container {
@@ -91,15 +104,11 @@ header * {
 	inline-size: max-content;
 }
 /*Main*/
+
 Main {
-	display: flex;
-	justify-content: center;
 	gap: 0.5rem;
-	align-items: center;
 }
 .text-container {
-	display: flex;
-	flex-direction: column;
 	gap: 2rem;
 	max-width: 400px;
 }
@@ -113,14 +122,10 @@ Main {
 	border-radius: 7px;
 	background-color: var(--btn-color);
 }
-
 /*Form section*/
 
 #form-section {
 	height: 80vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .sign-in-form-container {
 	width: 731px;
@@ -146,7 +151,6 @@ Main {
 }
 .form-text {
 	margin-left: 3.2rem;
-	flex-direction: column;
 	gap: 1rem;
 }
 a[data="focus"] {
@@ -161,15 +165,11 @@ a[data="focus"] {
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 	gap: 0.3em 0;
-	justify-items: center;
-	align-items: center;
 }
 #sign-in .btn {
 	padding: 1rem 2rem;
 }
 .field {
-	display: flex;
-	flex-direction: column;
 	background-color: var(--main-color);
 	padding: 10px;
 }
