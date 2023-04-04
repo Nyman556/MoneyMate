@@ -59,10 +59,12 @@ input {
 a[data="special"] {
 	color: var(--btn-color);
 }
-h1,
-h2,
-h3 {
-	font-size: clamp(1.5rem 2rem 2rem);
+p,
+a,
+input,
+label,
+button {
+	font-size: clamp(0.8rem, 2vw, 1rem);
 }
 .hidden {
 	display: none;
@@ -70,7 +72,20 @@ h3 {
 .active {
 	display: grid;
 }
-
+.large-btn,
+.small-btn {
+	font-weight: var(--tertiary-fontweight);
+	inline-size: max-content;
+	border-radius: 5px;
+	background-color: var(--btn-color);
+	color: var(--text-color);
+}
+.large-btn {
+	padding: 1rem 1rem;
+}
+.small-btn {
+	padding: 0.5rem 0.5rem;
+}
 /*Flex classes*/
 .flex-d-r {
 	display: flex;
@@ -144,13 +159,7 @@ Main {
 	justify-content: center;
 	align-items: center;
 }
-.btn {
-	font-weight: var(--tertiary-fontweight);
-	inline-size: max-content;
-	padding: 1rem 0.5rem;
-	border-radius: 7px;
-	background-color: var(--btn-color);
-}
+
 /*Form section*/
 /*Sign-in form*/
 #form-section {
@@ -225,8 +234,7 @@ footer {
 	bottom: 0px;
 	left: 0px;
 }
-
-/* Large desktop */
+/*Media Queries*/
 @media (max-width: 1200px) {
 	header {
 		gap: 0;
@@ -240,7 +248,7 @@ footer {
 		scale: clamp(0.5 0.7 0.7);
 	}
 }
-/* Portrait tablet to landscape and desktop */
+
 @media (max-width: 979px) {
 	header {
 		display: flex;
@@ -271,7 +279,6 @@ footer {
 	}
 }
 
-/* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	.anchor-container {
 		margin-right: 2rem;
@@ -284,7 +291,7 @@ footer {
 		max-width: 390px;
 	}
 }
-/* Landscape phones and down */
+
 @media (max-width: 480px) {
 	.anchor-container {
 		margin-right: none;
@@ -304,13 +311,6 @@ footer {
 	}
 }
 
-p,
-a,
-input,
-label,
-button {
-	font-size: clamp(0.8rem, 2vw, 1rem);
-}
 #register {
 	grid-auto-rows: 1fr;
 	gap: 0.3em 0;
@@ -320,4 +320,60 @@ button {
 }
 ::-webkit-calendar-picker-indicator {
 	filter: invert(1);
+}
+
+/*credit-cards*/
+.content-container {
+	position: relative;
+	width: 600px;
+	height: 20vh;
+}
+.credit-card-one,
+.credit-card-two,
+.credit-card-three {
+	position: absolute;
+	width: 343px;
+	height: 218px;
+	border-radius: 20px;
+	top: 0;
+	animation-duration: 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.credit-card-one {
+	background-image: url(assets/Credit_card_one.jpg);
+	z-index: 1;
+	animation-name: card-one-animation;
+}
+.credit-card-two {
+	background-image: url(assets/Credit_card_two.jpg);
+	z-index: 2;
+}
+.credit-card-three {
+	background-image: url(assets/Credit_card_three.jpg);
+	z-index: 3;
+	animation-name: card-three-animation;
+}
+
+/*Animations*/
+
+@keyframes card-one-animation {
+	0% {
+		top: 0px;
+		transform: rotate(0deg);
+	}
+	100% {
+		top: -80px;
+		transform: rotate(-16deg);
+	}
+}
+@keyframes card-three-animation {
+	0% {
+		top: 0px;
+		transform: rotate(0deg);
+	}
+	100% {
+		top: 52px;
+		transform: rotate(20deg);
+	}
 }

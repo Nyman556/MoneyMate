@@ -3,11 +3,6 @@ const signInBtn = document.getElementById("sign-in-btn");
 const register = document.getElementById("register");
 const registerBtn = document.getElementById("register-btn");
 
-const displayVarations = [
-	{ active: true, display: "none" },
-	{ active: false, display: "grid" },
-];
-
 function toggleForms(clicked) {
 	console.log(clicked.id);
 	if (clicked.id == signInBtn.id) {
