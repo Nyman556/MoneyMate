@@ -36,10 +36,12 @@ body {
 	background-color: var(--bg-color);
 	font-weight: var(--main-fontweight);
 	font-family: "Raleway", sans-serif;
+	overflow: hidden;
 }
 header,
 main,
 section {
+	width: 100%;
 	margin-bottom: 10vh;
 }
 input {
@@ -104,7 +106,6 @@ header * {
 	inline-size: max-content;
 }
 /*Main*/
-
 Main {
 	display: flex;
 	align-items: center;
