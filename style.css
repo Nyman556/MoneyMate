@@ -224,6 +224,7 @@ main {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	border: 2px solid var(--main-color);
 }
 .sign-in-form-container,
 .left-side-container {
@@ -416,8 +417,15 @@ footer {
 		padding-right: 1em;
 	}
 	.content-container {
+		height: 400px;
 		padding: 0;
 		max-width: 390px;
+	}
+	.replacement {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 390px;
 	}
 	.replacement img {
 		scale: 0.5;
@@ -426,6 +434,8 @@ footer {
 		padding-bottom: 0;
 	}
 }
+
+/*Animation classes for forms*/
 .left {
 	animation-iteration-count: 1;
 	animation-duration: 2s;
