@@ -157,6 +157,7 @@ main {
 .content-container {
 	position: relative;
 	width: 600px;
+	padding-top: 20vh;
 }
 .credit-card-one,
 .credit-card-two,
@@ -197,14 +198,18 @@ main {
 }
 .character-text {
 	position: absolute;
-	width: 307px;
-	height: 189px;
-	left: -200px;
-	top: -180px;
-	animation-name: character-text;
+	width: 337px;
+	height: 265px;
+	left: -210px;
+	top: -255px;
+	animation-name: main-text;
 	animation-delay: 4s;
 	animation-duration: 1s;
 	opacity: 0;
+}
+
+.replacement {
+	display: none;
 }
 
 /*Form section*/
@@ -326,7 +331,7 @@ footer {
 		transform: rotate(-16deg);
 	}
 }
-@keyframes character-text {
+@keyframes main-text {
 	0% {
 		opacity: 0;
 	}
@@ -344,7 +349,9 @@ footer {
 		margin: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 20vh;
+	}
+	.content-container {
+		margin-left: 20vw;
 	}
 }
 
@@ -380,10 +387,18 @@ footer {
 	}
 	.content-container {
 		max-width: 390px;
+		margin-left: 0;
 	}
-	.card {
-		width: 171.5px;
-		height: 109px;
+	.card,
+	.character,
+	.character-text {
+		display: none;
+	}
+	.replacement {
+		display: flex;
+	}
+	.replacement img {
+		scale: 0.6;
 	}
 }
 
@@ -397,6 +412,9 @@ footer {
 	}
 	.content-container {
 		max-width: 390px;
+	}
+	.replacement img {
+		scale: 0.4;
 	}
 	main {
 		padding-bottom: 0;

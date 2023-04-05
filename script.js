@@ -18,3 +18,7 @@ function toggleForms(clicked) {
 		signInBtn.setAttribute("data", "off");
 	}
 }
+
+window.onload = function () {
+	yourFunction(param1, param2);
+};
