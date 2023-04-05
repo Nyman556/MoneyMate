@@ -2,6 +2,7 @@ const signIn = document.getElementById("sign-in");
 const signInBtn = document.getElementById("sign-in-btn");
 const register = document.getElementById("register");
 const registerBtn = document.getElementById("register-btn");
+const formContainer = document.getElementById("moveable");
 
 function toggleForms(clicked) {
 	console.log(clicked.id);
@@ -10,15 +11,13 @@ function toggleForms(clicked) {
 		register.classList.replace("active", "hidden");
 		registerBtn.setAttribute("data", "off");
 		signInBtn.setAttribute("data", "focus");
+		formContainer.classList = "left-side-container left";
 	}
 	if (clicked.id == registerBtn.id) {
 		signIn.classList.replace("active", "hidden");
 		register.classList.replace("hidden", "active");
 		registerBtn.setAttribute("data", "focus");
 		signInBtn.setAttribute("data", "off");
+		formContainer.classList = "left-side-container right";
 	}
 }
-
-window.onload = function () {
-	yourFunction(param1, param2);
-};

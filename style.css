@@ -218,10 +218,12 @@ main {
 	height: 80vh;
 }
 .sign-in-form-container {
-	width: 731px;
-	background-image: url(assets/mountain.png);
-	background-size: contain;
+	width: 730px;
+	background-image: url(assets/form-background.png);
+	filter: brightness(0.7);
+	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 .sign-in-form-container,
 .left-side-container {
@@ -375,6 +377,9 @@ footer {
 	footer {
 		position: absolute;
 	}
+	#moveable {
+		animation: none;
+	}
 }
 
 @media (max-width: 767px) {
@@ -411,12 +416,43 @@ footer {
 		padding-right: 1em;
 	}
 	.content-container {
+		padding: 0;
 		max-width: 390px;
 	}
 	.replacement img {
-		scale: 0.4;
+		scale: 0.5;
 	}
 	main {
 		padding-bottom: 0;
+	}
+}
+.left {
+	animation-iteration-count: 1;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-name: formMoveRight;
+}
+
+.right {
+	animation-iteration-count: 1;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-name: formMoveLeft;
+}
+
+@keyframes formMoveLeft {
+	0% {
+		transform: translate(0);
+	}
+	100% {
+		transform: translate(365.5px, 0px);
+	}
+}
+@keyframes formMoveRight {
+	0% {
+		transform: translate(365.5px, 0px);
+	}
+	100% {
+		transform: translate(0);
 	}
 }
