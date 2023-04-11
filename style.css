@@ -38,7 +38,6 @@ input[type="checkbox"] {
 	bottom: 1px;
 }
 
-
 /*general Styling*/
 html,
 body {
@@ -78,7 +77,8 @@ button {
 h1 {
 	font-size: clamp(1.5rem, 4vw, 2rem);
 }
-a, button {
+a,
+button {
 	cursor: pointer;
 }
 .hidden {
@@ -118,7 +118,6 @@ a, button {
 	justify-content: center;
 }
 
-
 /*Hovers*/
 a:hover {
 	color: var(--btn-color);
@@ -157,7 +156,7 @@ main {
 }
 .text-container {
 	max-width: 500px;
- 	grid-area: 1 / 2 / 2 / 3;
+	grid-area: 1 / 2 / 2 / 3;
 	gap: 1rem;
 	place-content: center;
 }
@@ -201,7 +200,8 @@ a[data="focus"] {
 a[data="off"] {
 	color: var(--text-color-off);
 }
-#sign-in, #register {
+#sign-in,
+#register {
 	grid-template-rows: repeat(6, 1fr);
 	gap: 0.3em 0;
 }
@@ -267,7 +267,7 @@ footer {
 }
 
 /*Animation classes for forms*/
-.animated{
+.animated {
 	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;
