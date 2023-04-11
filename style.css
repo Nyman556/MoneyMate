@@ -235,6 +235,9 @@ footer {
 	left: 0px;
 	font-weight: var(--tertiary-fontweight);
 }
+footer a ion-icon {
+	vertical-align: bottom;
+}
 
 /*Media Queries*/
 @media (max-width: 1440px) {
