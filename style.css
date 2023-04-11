@@ -2,11 +2,12 @@
 
 :root {
 	--bg-color: #151d2f;
-	--main-color: #636b97;
-	--secondary-color: #3f4365;
-	--text-color: #ffffff;
+	--main-color: #454b6a;
+	--secondary-color: #2c2f47;
+	--text-color: #f5f5f7;
+	--text-secondary: #3f4365;
 	--text-color-off: #86889e;
-	--btn-color: #eeaa74;
+	--btn-color: #a77751;
 	--main-fontweight: 400;
 	--secondary-fontweight: 600;
 	--tertiary-fontweight: bold;
@@ -41,6 +42,7 @@ input[type="checkbox"] {
 /*general Styling*/
 html,
 body {
+	align-items: center;
 	scroll-behavior: smooth;
 	position: relative;
 	min-height: 100%;
@@ -66,7 +68,7 @@ a[data="special"] {
 	color: var(--btn-color);
 }
 p {
-	color: var(--main-color);
+	color: var(--text-secondary);
 }
 p,
 #form-section a,
@@ -93,6 +95,10 @@ button {
 	inline-size: max-content;
 	border-radius: 5px;
 	background-color: var(--btn-color);
+	color: var(--text-color);
+}
+.large-btn:hover,
+.small-btn:hover {
 	color: var(--text-color);
 }
 .large-btn {
@@ -134,12 +140,14 @@ header {
 	text-align: center;
 }
 #logo {
+	margin-top: 0.3rem;
 	max-width: 150px;
 	height: auto;
 }
 .navbar-container,
 .anchor-container {
 	gap: 3rem;
+	align-items: center;
 }
 .anchor-container {
 	font-weight: var(--secondary-fontweight);
@@ -178,7 +186,6 @@ main {
 	width: 730px;
 	height: auto;
 	background: no-repeat center/100% url("assets/form-background.png");
-	filter: brightness(0.7);
 	border: 2px solid var(--main-color);
 }
 .sign-in-form-container,
@@ -281,6 +288,7 @@ footer {
 	animation-name: formMoveLeft;
 }
 
+/*Keyframes*/
 @keyframes formMoveLeft {
 	0% {
 		transform: translate(0);
